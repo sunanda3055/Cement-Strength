@@ -21,6 +21,14 @@ body {
     font-color: #2C2C2C;
 }
 
+.main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 35px;
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -31,11 +39,13 @@ body {
     text-align: center;
     background-color: #FFFFFF;
 }
-.nav-bar span{
+
+.nav-bar .logo a {
     margin: 0 0 0 100px;
     font-weight: 600;
     font-size: 24px;
     color: #2C2C2C;
+    text-decoration: none;
 }
 
 .contact {
@@ -103,10 +113,15 @@ body {
     font-weight: 600;
 }
 
+.custom-label {
+    margin-bottom: 5px;
+}
+
 input {
-    height: 7vh;
-    width: 13vw;
+    height: 32px;
+    width:  100%;
     border-radius: 8px;
+    padding: 2px 12px;
 }
 
 .btn {
@@ -124,11 +139,11 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin : 5% 0 0 0;
-    height: 80vh;
-    width: 85vw;
+    margin : 35px auto 0;
+    width: 85%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.7);
+    padding: 20px 0px;
 }
 
 .form {
@@ -136,23 +151,27 @@ input {
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    height: 50%;
 }
 
 .label1 {
-    height: 200px;
-    width: 380px;
+    display: block;
+    width: 45%;
 }
 
-.label2 {
-    height: 200px;
-    width: 380px;
+@media screen and (max-width: 550px) {
+    .form {
+        flex-direction: column;
+    }
+
+    .label1 {
+        width: 100%;
+    }
 }
 
 label {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
     margin: 0 0 20px 0;
     font-weight: 600;
 }
@@ -168,7 +187,6 @@ label input {
     justify-content : flex-end;
     align-items: center;
     width: 100%;
-    height: 70px;
 }
 
 .btn2 div {
@@ -205,14 +223,17 @@ label input {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
-    width: 85vw;
+    padding: 25px 0;
+    width: 85%;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.7);
 }
 
+.content {
+    max-width: 80%;
+}
+
 .prediction-text{
-    padding-top: 15%;
     font-weight: 600;
     font-size: 32px;
 }
@@ -220,10 +241,10 @@ label input {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1%;
-    margin-top: 5%;
+    padding: 20px;
+    margin-top: 25px;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 28px;
     background-color: #0050EB;
     border-radius: 8px;
     color: #FFFFFF;
@@ -231,22 +252,30 @@ label input {
 
 /* HERE STARTS TRAINING PAGE */
 .trainingBox {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    width: 85%;
+    margin : 75px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    padding: 30px 0;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin : 5% 0 0 0;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 20px;
-    height: 80vh;
-    width: 85vw;
 }
 
-.train-text1 h3{
+.train-text1 {
     font-weight: 600;
+    margin: 30px 0;
 }
 
-.train-text1 span{
+.train-text1 span {
     color: #0050EB;
 }
 
@@ -284,5 +313,9 @@ label input {
 
 .train-text2 a {
     text-decoration: none;
+    margin-bottom: 10px;
 }
 
+.train-text2 span {
+    margin-bottom: 20px;
+}
